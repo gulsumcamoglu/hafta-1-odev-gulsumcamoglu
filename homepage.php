@@ -30,8 +30,8 @@ include("database.php");
                         <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-info" type="submit" name="search">Search</button>
                     </form>
-                  <a href="register.php"> <button class="btn btn-outline-info m-3" type="button" >Giriş</button></a>
-                    <button class="btn btn-outline-info" type="button">Kayıt</button>
+                    <a href="login.php">  <button class="btn btn-outline-info m-3" type="button" >Giriş</button></a>
+                    <a href="register.php">  <button class="btn btn-outline-info" type="button">Kayıt</button></a>
                 </div>
 
 

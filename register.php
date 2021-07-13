@@ -31,8 +31,9 @@ include("database.php");
                 <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-info" type="submit" name="search">Search</button>
             </form>
-            <a href="register.php"> <button class="btn btn-outline-info m-3" type="button" >Giriş</button></a>
-            <button class="btn btn-outline-info" type="button">Kayıt</button>
+
+            <a href="login.php">  <button class="btn btn-outline-info m-3" type="button" >Giriş</button></a>
+            <a href="register.php">  <button class="btn btn-outline-info" type="button">Kayıt</button></a>
         </div>
 
 
@@ -66,7 +67,7 @@ include("database.php");
                  </div>
                  <div class="input-group mb-3 d-flex justify-content-center">
                      <a href="homepage.php"> <button type="button" class="btn btn-outline-info m-3">Cancel</button></a>
-                     <button type="submit" class="btn btn-outline-info m-3" name="signupbtn">Register Now</a></button>
+                  <button type="submit" class="btn btn-outline-info m-3" name="signupbtn">Register Now</button>
 
                  </div>
              </form>
