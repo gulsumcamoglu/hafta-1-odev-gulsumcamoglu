@@ -128,6 +128,7 @@ if (isset($_POST['signupbtn'])){
                 } else {
                     $registration = "INSERT INTO users(userName,userSurname,email,rollId, pwd,sepetId) 
                          VALUES (?, ?, ?, ?, ?, ?)";
+
                     $stmt = mysqli_stmt_init($conn);
                     if (!mysqli_stmt_prepare($stmt, $registration)) {
                         echo '<script>
@@ -137,9 +138,23 @@ if (isset($_POST['signupbtn'])){
                         exit();
                     } else {
                         $password_hash = password_hash($psw, PASSWORD_DEFAULT);
+                        $sepet = "INSERT INTO sepet(sepetId) 
+                         VALUES ('$sepetId')";
+                        if (isset($conn)) {
+                            $insertTicketTable1 = mysqli_query($conn, $sepet);
+                            if (!$insertTicketTable1) {
+                                echo "SQL error, check your code! ";
+                            }
+                        }
 
-                        mysqli_stmt_bind_param($stmt, "ssssss", $name, $surname, $email,$rolId, $password_hash, $sepetId);
-                        mysqli_stmt_execute($stmt);
+                        $regUserTicket = "INSERT INTO users(userName,userSurname,email,rollId, pwd,sepetId)
+                                    VALUES('$name','$surname','$email','$rolId','$password_hash','$sepetId') ";
+                        if (isset($conn)) {
+                            $insertTicketTable2 = mysqli_query($conn, $regUserTicket);
+                            if (!$insertTicketTable2) {
+                                echo "SQL error, check your code! ";
+                            }
+                        }
 
                         echo '    <div id="id01" style=" 
                                     position: fixed; 
