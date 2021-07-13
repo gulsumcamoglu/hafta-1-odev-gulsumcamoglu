@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca3ec55-53c3-469e-9b72-0e8443300a47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IstanbulMarket.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="dca3ec55-53c3-469e-9b72-0e8443300a47" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +44,7 @@
       <updated>1626077988517</updated>
       <workItem from="1626077989627" duration="9251000" />
       <workItem from="1626109724641" duration="8778000" />
-      <workItem from="1626159397889" duration="295000" />
+      <workItem from="1626159397889" duration="803000" />
     </task>
     <servers />
   </component>
