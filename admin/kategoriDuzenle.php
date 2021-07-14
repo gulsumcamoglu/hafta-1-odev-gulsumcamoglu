@@ -124,35 +124,39 @@ if (!isset($_SESSION['mail'])) {
 
 if(isset($_POST['kategoriId'])){
     $kategoriId = $_POST['kategoriId'];
-    $deleteKategori = "DELETE FROM kategoriler WHERE kategoriId='$kategoriId';";
+    $findUrun= "SELECT * FROM urun WHERE kategoriId='$kategoriId';";
+    $findUrunConn = mysqli_query($conn, $findUrun);
+    while ($row2 = mysqli_fetch_array($findUrunConn)) {
 
-    $result = mysqli_query($conn, $deleteKategori);
-    if (!$result) {
-        echo '<script>
-                  if(confirm("Journey can not cancelled !")) {
-                            window.location.href = "adminProfile.php"
-           }</script>';
-        exit();
-    } else {
+        $kId =$row2['kategoriId'];
+        $uId = $row2['urunId'];
+        $checkSepetKull= "SELECT count(urunId) as num FROM sepet WHERE urunId='$uId';";
 
-        $findUrun= "SELECT * FROM urun WHERE kategoriId='$kategoriId';";
-        $findUrunConn = mysqli_query($conn, $findUrun);
+        $resultSepetKull = mysqli_query($conn, $checkSepetKull);
+        $roww =mysqli_fetch_array($resultSepetKull);
+        if ($roww['num'] > 0) {
+            while ($row3 = mysqli_fetch_array($resultSepetKull)) {
+                $nuId = $row3['urunId'];
+                $rearrangeSepet = "UPDATE sepet SET urunId='NULL' WHERE urunId='$nuId'";
+                $resultrearrangeSepet = mysqli_query($conn, $rearrangeSepet);
+            }
+        }else {
+             $deleteKategori = "DELETE FROM kategoriler WHERE kategoriId='$kategoriId';";
 
-        while ($row2 = mysqli_fetch_array($findUrunConn)) {
-            echo 'sdfsd';
-            $kId =$row2['kategoriId'];
-            $deleteUrun = "DELETE FROM urun WHERE kategoriId=$kId;";
-            $result2 = mysqli_query($conn, $deleteUrun);
-            if (!$result2) {
+            $result = mysqli_query($conn, $deleteKategori);
+            if (!$result) {
                 echo '<script>
                   if(confirm("Journey can not cancelled !")) {
                             window.location.href = "adminProfile.php"
            }</script>';
                 exit();
-            }
-        }
-        #echo "Journey Canceled";
-        echo '    <div id="id01" style=" 
+            } else {
+
+
+
+
+                #echo "Journey Canceled";
+                echo '    <div id="id01" style=" 
             position: fixed; 
             z-index: 1;
             left: 0;
@@ -174,8 +178,11 @@ if(isset($_POST['kategoriId'])){
             </div>
         </form>
     </div>';
-        exit();
+                exit();
+            }
+        }
     }
+
 }
 
 ?>

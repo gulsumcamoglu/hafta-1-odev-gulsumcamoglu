@@ -152,7 +152,7 @@ if (isset($conn)) {
                             <div class="row m-5" >
                                 <div class="col-sm-3">
                                     <div class="card" >
-                                        <img  class="card-img-top" src="data:image/jpeg;base64,<?php echo base64_encode( $row2['img'] ); ?>" />
+                                        <img  class="card-img-top" src="<?php echo  $row2['img'] ; ?>" >
 
                                     </div>
                                 </div>
