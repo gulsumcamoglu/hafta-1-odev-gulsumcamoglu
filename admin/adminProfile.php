@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("database.php");
+include("../database.php");
 if (!isset($_SESSION['mail'])) {
     $loginError = "You are not logged in !";
     echo '<script language="javascript">';
@@ -19,7 +19,7 @@ if (!isset($_SESSION['mail'])) {
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet"  >
+    <link href="../style.css" rel="stylesheet"  >
 
     <title>Istanbul Market</title>
 </head>
@@ -30,7 +30,7 @@ if (!isset($_SESSION['mail'])) {
     <div class="row" >
         <div class="col-sm-4 d-flex flex-wrap align-items-center justify-content-center " >
             <a class="navbar-brand" href="adminProfile.php">
-                <img src="logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
+                <img src="../images/logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
             </a>
         </div>
         <div class="col-sm-8 d-flex flex-wrap align-items-center justify-content-center " >
@@ -38,7 +38,24 @@ if (!isset($_SESSION['mail'])) {
                 <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-info" type="submit" name="search">Search</button>
             </form>
-            <a href="logout.php">  <button class="btn btn-outline-info m-3" type="button" >Çıkış</button></a>
+            <a href="adminProfile.php" style="text-decoration-line: none" > <button class="btn btn-outline-info m-3" type="button" >
+                    <?php
+                    $email = $_SESSION['mail'];
+                    $query = "SELECT * FROM users WHERE email='$email'";
+                    if (isset($conn)) {
+                        $queryConn = mysqli_query($conn, $query);
+
+                        if (!$queryConn){
+                            echo "Error";
+                        }else{
+                            while($row = mysqli_fetch_array($queryConn)){
+                                $name = $row['userName'];
+                                echo "Hi! ".$name;
+                            }
+                        }
+                    } ?>
+                </button></a>
+            <a href="../logout.php">  <button class="btn btn-outline-info m-3" type="button" >Çıkış</button></a>
 
         </div>
 

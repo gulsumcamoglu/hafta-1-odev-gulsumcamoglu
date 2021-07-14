@@ -15,6 +15,7 @@ include("database.php");
 
     <title>Istanbul Market</title>
 </head>
+
 <body>
 <!-- navbar start -->
     <div class="container-fluid">
@@ -22,7 +23,7 @@ include("database.php");
             <div class="row" >
                 <div class="col-sm-4 d-flex flex-wrap align-items-center justify-content-center " >
                     <a class="navbar-brand" href="homepage.php">
-                        <img src="logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
+                        <img src="images/logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
                     </a>
                 </div>
                 <div class="col-sm-8 d-flex flex-wrap align-items-center justify-content-center " >
@@ -42,53 +43,111 @@ include("database.php");
 <!-- navbar end -->
 
 <!-- kategori bar start -->
-<?php
-$kategori = array();
-  $kategoriler = "SELECT * FROM kategoriler";
-  if (isset($conn)){
-      $result = mysqli_query($conn, $kategoriler);
-      if(!$result){
 
-      }else{
-
-         #$kategori= $row['kategoriAdı'];
-        while( $row = mysqli_fetch_array($result)) {
-
-            array_push($kategori,$row['kategoriAdı']);
-
-        }
-      }
-  }
-
-
-?>
-    <div class="container-fluid">
-        <div class="row p-6 "  style=" background-color: #9c9c9c;">
-            <div class=" col-sm d-flex flex-wrap align-items-center justify-content-center mx-2" style="float:left;">
-                <table class="table-primary  " style="float:left;">
-                    <tr >
-             <?php
-                 for($i=0;$i<count($kategori);$i++){
-
-                    ?>  <th></th>
-                     <?php
-                 }
-
-             foreach ($kategori as $value) { ?>
-                    <tr style="float:left;">
-                        <td class="kategoriBox " > <?php echo $value ?></td>
-              <?php
-              }
-              ?>
-                </table>
-            </div>
+<div class="container-fluid">
+    <div class="row  justify-content-center"  style=" background-color: #9c9c9c;" >
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2  "> elektronik</a>
         </div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2">  moda</a>
+        </div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
 
+            <a href="" class="homeLink1 p-2">ev,yaşam,kırtasiye</a> </div>
+
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2"> oto,bahce,yapi market</a></div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2">anne,bebek,oyuncak</a> </div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2"> spor,outdoor</a></div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2"> kozmetik,kisisel bakim</a></div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2">supermarket,petshop</a> </div>
+        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
+            <a href="" class="homeLink1 p-2">kitap,muzik,film,hobi</a> </div>
 
     </div>
 
-<!-- kategori bar end -->
-<!-- Optional JavaScript; choose one of the two! -->
+
+</div>
+
+
+<!-- slider start -->
+<div class="container">
+    <div class="row h-100">
+        <div class="col-sm-10 offset-1">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators"       >
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/slide1.png" class="d-inline-block w-100  " alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slider2.png" class="d-inline-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slider3.png" class="d-inline-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- slider end -->
+<!-- markalar start-->
+
+<div class="container">
+    <div class="row mt-5 offset-1">
+        <?php
+        $marka = "SELECT * FROM marka  ";
+        if (isset($conn)) {
+            $queryConnMarka = mysqli_query($conn, $marka);
+        if (!$queryConnMarka){
+            echo "Error";
+        }else{
+        while($row = mysqli_fetch_array($queryConnMarka)){
+        $mId= $row['markaId'];
+
+        ?>
+        <div class="col-sm-2 m-2 ">
+            <a target="_blank" href="">
+               <!-- <img src="images/ebebekLogo.png"  alt="Forest" style="width:150px"> -->
+                <img  class="marka w-100 h-100" src="data:image/jpeg;base64,<?php echo base64_encode( $row['logo'] ); ?>" />
+            </a>
+        </div>
+
+
+
+
+        <?php
+        }
+        }
+
+
+        }
+        ?>
+
+    </div>
+</div>
+<!-- markalar end -->
+<!-- kategori bar end --><!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

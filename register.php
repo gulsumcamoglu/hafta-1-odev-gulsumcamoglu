@@ -23,7 +23,7 @@ include("database.php");
     <div class="row" >
         <div class="col-sm-4 d-flex flex-wrap align-items-center justify-content-center " >
             <a class="navbar-brand" href="homepage.php">
-                <img src="logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
+                <img src="images/logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
             </a>
         </div>
         <div class="col-sm-8 d-flex flex-wrap align-items-center justify-content-center " >

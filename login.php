@@ -29,7 +29,7 @@ if (isset($_SESSION['email'])) {
     <div class="row" >
         <div class="col-sm-4 d-flex flex-wrap align-items-center justify-content-center " >
             <a class="navbar-brand" href="homepage.php">
-                <img src="logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
+                <img src="images/logo.png" alt="" width="410" height="114" class="d-inline-block align-text-top">
             </a>
         </div>
         <div class="col-sm-8 d-flex flex-wrap align-items-center justify-content-center " >
@@ -124,7 +124,7 @@ if (isset($_POST['login'])){
 
                 if($row['rollId'] == 2) {
                     $_SESSION['mail'] = $row['email'];
-                    echo '<script>window.location.href = "adminProfile.php"</script>';
+                    echo '<script>window.location.href = "admin/adminProfile.php"</script>';
                     exit();
                 }
 
@@ -140,7 +140,7 @@ if (isset($_POST['login'])){
 
                 } else if ($pwdCheck == true) {
                     $_SESSION['mail'] = $row['email'];
-                    header("Location: homepage_RU.php");
+                    header("Location: ru/homepage_RU.php");
                     exit();
 
                 } else {
