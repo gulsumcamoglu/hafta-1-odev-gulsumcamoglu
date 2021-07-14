@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dca3ec55-53c3-469e-9b72-0e8443300a47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ru/sepet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/ekleKategori.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/kategoriDuzenle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/silKategori.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/urunYonetimi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage_RU.php" beforeDir="false" afterPath="$PROJECT_DIR$/ru/homepage_RU.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/adminProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ru/homepage_RU.php" beforeDir="false" afterPath="$PROJECT_DIR$/ru/homepage_RU.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
       <workItem from="1626077989627" duration="9251000" />
       <workItem from="1626109724641" duration="8778000" />
       <workItem from="1626159397889" duration="24324000" />
-      <workItem from="1626242100622" duration="4520000" />
+      <workItem from="1626242100622" duration="17913000" />
     </task>
     <task id="LOCAL-00001" summary="register,homepage">
       <created>1626160246884</created>
@@ -85,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626172187169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="homepage">
+      <created>1626248201135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626248201135</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,28 +100,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="register,homepage" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="homepage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626246389428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1626246389428" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1626172186234">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1626248200383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626172186234" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626248200383" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1626242713491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626242713491" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1626175348537">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1626264492594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1626175348537" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1626172192664">
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1626264492594" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1626248204649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626172192664" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626248204649" />
   </component>
 </project>

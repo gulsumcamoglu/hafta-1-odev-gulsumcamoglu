@@ -68,18 +68,56 @@ if (!isset($_SESSION['mail'])) {
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-sm-7 d-2">
-            <div  class="mt-5 regBox p-5">
+            <div class="mt-5 regBox p-5">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <hr>
+                    <?php
+                    $kategori = "SELECT * FROM kategoriler  ";
+                    if (isset($conn)) {
+                    $queryConnK = mysqli_query($conn, $kategori);
+                    if (!$queryConnK){
+                        echo "Error";
+                    }else{
+                    while($row = mysqli_fetch_array($queryConnK)){
+                    $mId= $row['kategoriId'];
+                    ?>
 
-                <hr>
 
-                    <a href="urunYonetimi.php">  <button class="btn btn-outline-info m-3" type="submit" name="login" >Ürün Yönetimi</button></a>
-                    <a href="kategoriDuzenle.php">  <button class="btn btn-outline-info m-3" type="button">Kategori Yönetimi</button></a>
-                <a href="kullanıcıYonetimi.php">  <button class="btn btn-outline-info m-3" type="button">Kullanıcı Yönetimi</button></a>
+                    <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $row['kategoriId']; ?></th>
+                        <td><?php echo $row['kategoriAdı']; ?></td>
+                        <td>
+                            <?php
+                            echo "<form action='silKategori.php' method='POST'><button class='btn btn-outline-info m-3'
+                                value=" . $row["kategoriId"] . "  name='sil'>Sil</button></form>"
+                            ?>
 
-                </div>
+                           </td>
+                        <td><a href="kategoriDuzenle.php">  <button class="btn btn-outline-info m-3" type="button" name="duzenle" >Düzenle</button></a></td>
+                    </tr>
+
+                    <?php
+                    }
+                    }
+
+
+                    }
+                    ?>
+                </table>
+                <a href="kategoriEkle.php">  <button class="btn btn-outline-info m-3" type="button" name="ekle" >Ekle</button></a>
             </div>
         </div>
     </div>
+</div>
 
 </div>
 </body>
