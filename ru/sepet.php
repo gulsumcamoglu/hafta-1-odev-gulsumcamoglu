@@ -47,11 +47,11 @@ if (!isset($_SESSION['mail'])) {
                         $queryConn = mysqli_query($conn, $query);
 
                         if (!$queryConn){
-                            echo "Error";
+                            echo "Kullanıcı Bulunamadı!";
                         }else{
                             while($row = mysqli_fetch_array($queryConn)){
                                 $name = $row['userName'];
-                                echo "Hi! ".$name;
+                                echo "Hoşgeldin! ".$name;
                             }
                         }
                     } ?>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['mail'])) {
                         $queryConn = mysqli_query($conn, $query);
 
                         if (!$queryConn){
-                            echo "Error";
+                            echo "Sepette Ürün Bulunmamaktadır";
                         }else{
                             while($row = mysqli_fetch_array($queryConn)){
                                 $sId= $row['sepetId'];
@@ -143,7 +143,7 @@ if (isset($conn)) {
             $queryConn2 = mysqli_query($conn, $urun);
 
             if (!$queryConn2){
-                echo "Error";
+                echo "Sepette Ürün Bulunmamaktadır!";
             }else{
                 while($row2 = mysqli_fetch_array($queryConn2)){
                     ?>

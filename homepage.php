@@ -46,28 +46,28 @@ include("database.php");
 
 <div class="container-fluid">
     <div class="row  justify-content-center"  style=" background-color: #9c9c9c;" >
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2  "> elektronik</a>
-        </div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2">  moda</a>
-        </div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
 
-            <a href="" class="homeLink1 p-2">ev,yaşam,kırtasiye</a> </div>
+        <?php
+        $kategoriler = "SELECT * FROM kategoriler";
+        $query = mysqli_query($conn, $kategoriler);
+        if (!$query){
+            echo "Error";
+        }else {
+            while ($row = mysqli_fetch_array($query)) {
+        ?>   <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
 
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2"> oto,bahce,yapi market</a></div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2">anne,bebek,oyuncak</a> </div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2"> spor,outdoor</a></div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2"> kozmetik,kisisel bakim</a></div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2">supermarket,petshop</a> </div>
-        <div class="col-sm d-flex flex-wrap justify-content-center homeLink">
-            <a href="" class="homeLink1 p-2">kitap,muzik,film,hobi</a> </div>
+                    <?php
+                    $kAdı =$row["kategoriAdı"];
+                    echo "<form action='kategoriDetay.php' method='POST'><button class='btn '
+                                value=" . $row["kategoriId"] . " type='submit' name='kategoriId'>$kAdı</button></form>"
+                    ?>
+                </div>
+
+                <?php
+            }
+        }
+        ?>
+
 
     </div>
 
