@@ -195,7 +195,7 @@ if(isset($_POST['urunId'])){
 
     $sayi=1;
     $uniqueId = rand(5,1000000);
-    $insert = "INSERT INTO sepet(sepetId,uniqueId,urunId,sayi) VALUES ('$sId','$uniqueId','$urunEkle',$sayi)";
+    $insert = "INSERT INTO sepet(sepetId,uniqueId,urunId,urunSayi) VALUES ('$sId','$uniqueId','$urunEkle',$sayi)";
     $qInsert = mysqli_query($conn,$insert);
     if(!$qInsert){
         echo 'eklenemedi';

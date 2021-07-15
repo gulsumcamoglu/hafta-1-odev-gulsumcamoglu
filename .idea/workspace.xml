@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca3ec55-53c3-469e-9b72-0e8443300a47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kategoriDetay.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ru/kategoriDetayRU.php" afterDir="false" />
+    <list default="true" id="dca3ec55-53c3-469e-9b72-0e8443300a47" name="Default Changelist" comment="database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ru/homepage_RU.php" beforeDir="false" afterPath="$PROJECT_DIR$/ru/homepage_RU.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ru/sepet.php" beforeDir="false" afterPath="$PROJECT_DIR$/ru/sepet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ru/kategoriDetayRU.php" beforeDir="false" afterPath="$PROJECT_DIR$/ru/kategoriDetayRU.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +56,7 @@
       <workItem from="1626109724641" duration="8778000" />
       <workItem from="1626159397889" duration="24324000" />
       <workItem from="1626242100622" duration="36562000" />
-      <workItem from="1626326037145" duration="7669000" />
+      <workItem from="1626326037145" duration="8677000" />
     </task>
     <task id="LOCAL-00001" summary="register,homepage">
       <created>1626160246884</created>
@@ -111,7 +107,35 @@
       <option name="project" value="LOCAL" />
       <updated>1626327868395</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sepet işlemleri">
+      <created>1626339103617</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626339103617</updated>
+    </task>
+    <task id="LOCAL-00009" summary="database">
+      <created>1626339255160</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626339255160</updated>
+    </task>
+    <task id="LOCAL-00010" summary="database">
+      <created>1626339337850</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626339337850</updated>
+    </task>
+    <task id="LOCAL-00011" summary="database">
+      <created>1626339403166</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626339403166</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,17 +148,19 @@
     <MESSAGE value="kategori Yönetimi" />
     <MESSAGE value="admin" />
     <MESSAGE value="admin KATEGORİ YÖNETİMİ" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin KATEGORİ YÖNETİMİ" />
+    <MESSAGE value="sepet işlemleri" />
+    <MESSAGE value="database" />
+    <option name="LAST_COMMIT_MESSAGE" value="database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626246389428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1626246389428" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1626327867331">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1626339402387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626327867331" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626339402387" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1626242713491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -143,9 +169,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1626337199543" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1626327873484">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1626339406112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626327873484" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626339406112" />
   </component>
 </project>
