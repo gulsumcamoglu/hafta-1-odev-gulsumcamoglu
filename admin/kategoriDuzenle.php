@@ -126,6 +126,7 @@ if(isset($_POST['kategoriId'])){
     $kategoriId = $_POST['kategoriId'];
     $findUrun= "SELECT * FROM urun WHERE kategoriId='$kategoriId';";
     $findUrunConn = mysqli_query($conn, $findUrun);
+    $roww = "";
     while ($row2 = mysqli_fetch_array($findUrunConn)) {
 
         $kId =$row2['kategoriId'];
@@ -135,28 +136,32 @@ if(isset($_POST['kategoriId'])){
         $resultSepetKull = mysqli_query($conn, $checkSepetKull);
         $roww =mysqli_fetch_array($resultSepetKull);
         if ($roww['num'] > 0) {
-            while ($row3 = mysqli_fetch_array($resultSepetKull)) {
+            $sepet = "SELECT * FROM sepet WHERE urunId=$uId";
+            $result1=mysqli_query($conn,$sepet);
+            while ($row3 = mysqli_fetch_array($result1)) {
                 $nuId = $row3['urunId'];
-                $rearrangeSepet = "UPDATE sepet SET urunId='NULL' WHERE urunId='$nuId'";
+                $rearrangeSepet = "UPDATE sepet SET urunId=NULL WHERE urunId='$nuId'";
                 $resultrearrangeSepet = mysqli_query($conn, $rearrangeSepet);
-            }
-        }else {
-             $deleteKategori = "DELETE FROM kategoriler WHERE kategoriId='$kategoriId';";
+            }}
+    }
+    if(!($roww['num'] > 0)){
 
-            $result = mysqli_query($conn, $deleteKategori);
-            if (!$result) {
-                echo '<script>
+        $deleteKategori = "DELETE FROM kategoriler WHERE kategoriId='$kategoriId';";
+
+        $result = mysqli_query($conn, $deleteKategori);
+        if (!$result) {
+            echo '<script>
                   if(confirm("Journey can not cancelled !")) {
                             window.location.href = "adminProfile.php"
            }</script>';
-                exit();
-            } else {
+            exit();
+        } else {
 
 
 
 
-                #echo "Journey Canceled";
-                echo '    <div id="id01" style=" 
+            #echo "Journey Canceled";
+            echo '    <div id="id01" style=" 
             position: fixed; 
             z-index: 1;
             left: 0;
@@ -178,10 +183,10 @@ if(isset($_POST['kategoriId'])){
             </div>
         </form>
     </div>';
-                exit();
-            }
+            exit();
         }
     }
+
 
 }
 
